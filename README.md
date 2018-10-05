@@ -10,11 +10,11 @@ seconds depending on wifi signal or how close are you to the router.**
 
 **dependencies:**
 
-aircrack-ng
-python2
-pip
-python colored
-reaver
+aircrack-ng,
+python2,
+pip,
+python colored,
+reaver,
 
 **this script was maked and tested on debian strech**
 
