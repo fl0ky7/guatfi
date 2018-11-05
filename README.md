@@ -1,4 +1,4 @@
-<img align="left" width="250" height="200" src="http://i64.tinypic.com/2m4w38o.png">
+<img align="left" width="300" height="220" src="http://i64.tinypic.com/2m4w38o.png">
 
 
 # gufi
