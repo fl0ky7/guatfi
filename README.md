@@ -1,9 +1,9 @@
 <img align="left" width="250" height="200" src="http://i64.tinypic.com/2m4w38o.png">
 
 
-# guatfi
+# gufi
 
-**guatfi is a script created to speed up the test of routers security with wps 
+**gufi is a script created to speed up the test of routers security with wps 
 activated,is based on older pixiedust attack,that is present today on new and
 old wifi routers around the global.**
 
