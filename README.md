@@ -23,7 +23,10 @@ reaver,
 **installation:**
 
 There a lots of tutorials on how to install all dependencies in your favorite
-linux distro on the net,you 
+linux distro on the net,if you have kali or parrot os just clone the script
+and fireup:
+
+<b>python gufi</b>
 
 **disclaimer:
 This tool is only for tests allowed by the owners or for self test,
