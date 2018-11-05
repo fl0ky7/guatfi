@@ -1,4 +1,4 @@
-<img align="left" width="200" height="200" src="http://i64.tinypic.com/2m4w38o.png">
+<img align="left" width="200" height="250" src="http://i64.tinypic.com/2m4w38o.png">
 
 
 # guatfi
